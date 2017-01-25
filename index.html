@@ -14,7 +14,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="dist/css/alt/AdminLTE-select2.min.css">
+    <link rel="stylesheet" href="plugins/iCheck/all.css">
     <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -94,10 +97,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </ul>
                 <ul class="sidebar-menu">
                     <li class="header">Инфоблоки</li>
-                    <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Новости</span></a></li>
-                    <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Предложения</span></a></li>
-                    <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Промо блоки на главной</span></a></li>
-                    <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Маленькие блоки на главной</span></a></li>
+                    <li class="active"><a class="sidebar-menu-link" href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Новости</span></a></li>
+                    <li><a class="sidebar-menu-link" href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Предложения</span></a></li>
+                    <li><a class="sidebar-menu-link" href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Промо блоки на главной</span></a></li>
+                    <li><a class="sidebar-menu-link" href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Маленькие блоки на главной</span></a></li>
                 </ul>
                 <ul class="sidebar-menu">
                     <li class="header">Медиамаркет</li>
@@ -158,26 +161,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <td class="text-center align-middle col-md-1">1.</td>
                                                     <td class="col-md-8 pull-middle">О компании</td>
                                                     <td class="col-md-2 text-center">
-                                                        <a href="#" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                                                        <a href="#" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                                        <a href="#" class="btn"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#" class="btn"><i class="fa fa-trash"></i></a>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-center col-md-1">2.</td>
                                                     <td class="col-md-8"><span class="pull-middle">Ставки</span></td>
                                                     <td class="col-md-2 text-center">
-                                                        <a href="#" class="btn btn-default"><i class="fa fa-pencil"></i></a>
-                                                        <a href="#" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                                        <a href="#" class="btn"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#" class="btn"><i class="fa fa-trash"></i></a>
                                                     </td>
                                                 </tr>
                                                 <tr class="media-middle">
                                                     <td class="text-center col-md-1">3.</td>
                                                     <td class="col-md-8">Пункты приемы ставок</td>
                                                     <td class="col-md-2 text-center">
-                                                        <div class="btn-group">
-                                                            <a href="#" class="btn btn-default"><i class="fa fa-pencil"></i></a>
-                                                            <a href="#" class="btn btn-default"><i class="fa fa-trash"></i></a>
-                                                        </div>
+                                                        <a href="#" class="btn"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#" class="btn"><i class="fa fa-trash"></i></a>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -194,12 +195,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                             </div>
                             <div class="box-footer clearfix">
-                                <ul class="pagination pagination-sm no-margin pull-right">
-                                    <li><a href="#">«</a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">»</a></li>
+                                <ul class="pagination  no-margin pull-right">
+                                    <li class="paginate_button previous disabled"><a href="#">Previous</a></li>
+                                    <li class="paginate_button"><a href="#">1</a></li>
+                                    <li class="paginate_button active"><a href="#">2</a></li>
+                                    <li class="paginate_button"><a href="#">3</a></li>
+                                    <li class="paginate_button"><a href="#">4</a></li>
+                                    <li class="paginate_button"><a href="#">5</a></li>
+                                    <li class="paginate_button"><a href="#">6</a></li>
+                                    <li class="paginate_button next"><a href="#">Next</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -208,76 +212,89 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box">
-                            <div class="box-header with-border">
+                            <div class="box-header with-border box-header-nav">
                                 <h3 class="box-title">Добавление страниц</h3>
+                                <div class="box nav-tabs-custom nav-tabs-custom-box">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">Основное</a></li>
+                                        <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false">SEO</a></li>
+                                        <li class=""><a href="#tab_3" data-toggle="tab" aria-expanded="false">Настройки</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <form class="form-group form-horizontal" action="">
                                 <div class="box-body">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <legend><small>Основное</small></legend>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" id="input" placeholder="Название страницы">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="input-url" class="col-md-2  control-label">stavki/sport/</label>
-                                        <div class="col-md-4">
-                                            <input type="text" class="form-control" id="input-url" placeholder="url">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <textarea class="form-control" name="" id="" rows="12" placeholder="код"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <legend><small>SEO</small></legend>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" id="input" placeholder="Meta title">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-6">
-                                            <textarea class="form-control" name="" id="" rows="7" placeholder="Meta description"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <legend><small>Настройки</small></legend>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-4">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Активность
-                                                </label>
+                                    <div class="nav-tabs-custom nav-tabs-custom-box-body">
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="tab_1">
+                                                <div class="form-group">
+                                                    <label for="input-url" class="col-md-2  control-label">Название страницы</label>
+                                                    <div class="col-md-6">
+                                                        <input type="text" class="form-control" id="input">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="input-url" class="col-md-2  control-label">stavki/sport/</label>
+                                                    <div class="col-md-6">
+                                                        <input type="text" class="form-control" id="input-url">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="input-url" class="col-md-2  control-label">Html</label>
+                                                    <div class="col-md-10">
+                                                        <textarea class="form-control" name="" id="" rows="12" placeholder="код"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="input-url" class="col-md-2  control-label">Css</label>
+                                                    <div class="col-md-10">
+                                                        <textarea class="form-control" name="" id="" rows="10" placeholder="код"></textarea>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-6">
-                                            <label>Select</label>
-                                            <select class="form-control">
-                                                <option>option 1</option>
-                                                <option>option 2</option>
-                                                <option>option 3</option>
-                                                <option>option 4</option>
-                                                <option>option 5</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" id="input" placeholder="Путь к css">
+                                            <div class="tab-pane" id="tab_2">
+                                                <div class="form-group">
+                                                    <label for="input-url" class="col-md-2  control-label">Meta title</label>
+                                                    <div class="col-md-6">
+                                                        <input type="text" class="form-control" id="input">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="input-url" class="col-md-2  control-label">Meta description</label>
+                                                    <div class="col-md-6">
+                                                        <textarea class="form-control" name="" id="" rows="7"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="tab_3">
+                                                <div class="form-group">
+                                                    <div class="col-md-offset-2 col-md-6">
+                                                        <div class="checkbox">
+                                                            <label class="icheck-label">
+                                                                <input class="icheck" type="checkbox"> Активность
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="input-url" class="col-md-2  control-label">Select</label>
+                                                    <div class="col-md-6">
+                                                        <select class="form-control">
+                                                            <option>option 1</option>
+                                                            <option>option 2</option>
+                                                            <option>option 3</option>
+                                                            <option>option 4</option>
+                                                            <option>option 5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="input-url" class="col-md-2  control-label">Путь к css</label>
+                                                    <div class="col-md-6">
+                                                        <input type="text" class="form-control" id="input">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -286,7 +303,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <div class="col-md-2">
                                             <button type="submit" class="btn btn-primary btn-block">Сохранить</button>
                                         </div>
-                                        <button type="submit" class="btn btn-default">Отмена</button>
+                                        <div class="col-md-2">
+                                            <button type="submit" class="btn btn-default btn-block">Отмена</button>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -304,7 +323,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
     <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/iCheck/icheck.min.js"></script>
     <script src="dist/js/app.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('input.icheck').iCheck({
+            checkboxClass: 'icheckbox_flat-blue',
+            radioClass: 'iradio_flat-blue',
+            increaseArea: '20%' // optional
+        });
+    });
+    </script>
 </body>
 
 </html>

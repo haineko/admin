@@ -1,0 +1,57 @@
+.sidebar-menu-link {
+	position: relative;
+}
+.sidebar-menu-link i {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+.sidebar-menu-link span {
+	padding-left: 25px;
+	display: inline-block;
+	white-space: normal;
+}
+.skin-blue .sidebar-menu>li.active>a.sidebar-menu-link i:before {
+    content: "\f111";
+}
+@media (min-width: 768px) {
+	.sidebar-mini.sidebar-collapse .sidebar-menu>li>a {
+	    height: 44px;
+	}
+}
+.box-header-nav {
+	padding-bottom: 0;
+}
+.nav-tabs-custom-box {
+	margin-bottom: 0;
+    margin-top: -13px;
+    margin-left: 20px;
+	min-width: 300px;
+	width: auto;
+    display: inline-block;
+    vertical-align: top;
+    border-bottom: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+.nav-tabs-custom-box>.nav-tabs {
+	margin-top: -3px;
+	border-bottom: none;
+}
+.nav-tabs-custom-box>.nav-tabs>li {
+	margin-bottom: -1px;
+}
+.nav-tabs-custom-box>.nav-tabs>li:first-of-type.active>a {
+    border-left-color: #f4f4f4;
+}
+.nav-tabs-custom-box-body {
+	box-shadow: none;
+	border-radius: 0;
+}
+.nav-tabs-custom-box-body>.tab-content {
+	padding: 0;
+}
+.checkbox label.icheck-label,
+.radio label.icheck-label {
+	padding-left: 0;
+}
