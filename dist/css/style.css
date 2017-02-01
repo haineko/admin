@@ -55,3 +55,25 @@
 .radio label.icheck-label {
 	padding-left: 0;
 }
+.form-url {
+	padding-top: 7px;
+	padding-right: 15px;
+	display: block;
+	float: left;
+}
+.form-url-input {
+	display: inline-block;
+}
+.content-header>.breadcrumb>li>.fa {
+	margin-right: 5px;
+}
+.content-header{
+	height: 41px;
+}
+.content-filter .checkbox {
+	float: left;
+	margin-right: 20px;
+}
+.content-filter .checkbox + .checkbox {
+	margin-top: 10px;
+}

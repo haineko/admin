@@ -65,14 +65,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <ul class="sidebar-menu">
                     <li class="header">Навигация</li>
                     <li><a href="staticpage.html"><i class="fa fa-file-o"></i> <span>Статические страницы</span></a></li>
-                    <li class="treeview">
+                    <li class="active" class="treeview">
                         <a href="#"><i class="fa fa-info-circle"></i> <span>Информационные блоки</span>
                           <span class="pull-right-container">
                             <i class="fa fa-angle-left pull-right"></i>
                           </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="news.html"><i class="fa fa-globe"></i>Новости</a></li>
+                            <li class="active"><a href="news.html"><i class="fa fa-globe"></i>Новости</a></li>
                             <li>
                                 <a href="action.html"><i class="fa fa-calendar-check-o"></i>Акции
                                   <span class="pull-right-container">
@@ -111,15 +111,96 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
+                <h1>Новости</h1>
                 <ol class="breadcrumb">
-                    <li class="active"><i class="fa fa-dashboard"></i>Главная</li>
+                    <li><a href="index.html"><i class="fa fa-dashboard"></i>Главная</a></li>
+                    <li class="active">Новости</li>
                 </ol>
             </section>
             <!-- Main content -->
             <section class="content">
-                <div class="alert alert-success">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <strong>Поздравляем!</strong> Вы успешно вошли в <b>Winline</b>Admin!
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Список страниц</h3>
+                            </div>
+                            <div class="box-body">
+                                <form class="form-group" action="">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <a href="add-news.html" class="btn btn-primary btn-block">Добавить</a>
+                                        </div>
+                                        <div class="col-md-6 col-md-offset-4">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Название или url" name="q">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <table class="table table-bordered" style="height: 100px;">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="text-center col-md-1" style="width: 45px">ID</th>
+                                                    <th class="text-center col-md-8">Название</th>
+                                                    <th class="text-center col-md-2">Действия</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center align-middle col-md-1">1.</td>
+                                                    <td class="col-md-8 pull-middle">Футбол - Кубок Англии</td>
+                                                    <td class="col-md-2 text-center">
+                                                        <a href="add.html" title="Редактировать" class="btn"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#" title="Удалить" class="btn"><i class="fa fa-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center col-md-1">2.</td>
+                                                    <td class="col-md-8"><span class="pull-middle">Тенис</span></td>
+                                                    <td class="col-md-2 text-center">
+                                                        <a href="add.html" title="Редактировать" class="btn"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#" title="Удалить" class="btn"><i class="fa fa-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="media-middle">
+                                                    <td class="text-center col-md-1">3.</td>
+                                                    <td class="col-md-8">Хоккей</td>
+                                                    <td class="col-md-2 text-center">
+                                                        <a href="add.html" title="Редактировать" class="btn"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#" title="Удалить" class="btn"><i class="fa fa-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center col-md-1">4.</td>
+                                                    <td class="col-md-8">Бейсбол</td>
+                                                    <td class="col-md-2 text-center">
+                                                        <a href="add.html" title="Редактировать" class="btn"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#" title="Удалить" class="btn"><i class="fa fa-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-footer clearfix">
+                                <ul class="pagination  no-margin pull-right">
+                                    <li class="paginate_button previous disabled"><a href="#">Previous</a></li>
+                                    <li class="paginate_button"><a href="#">1</a></li>
+                                    <li class="paginate_button active"><a href="#">2</a></li>
+                                    <li class="paginate_button"><a href="#">3</a></li>
+                                    <li class="paginate_button"><a href="#">4</a></li>
+                                    <li class="paginate_button"><a href="#">5</a></li>
+                                    <li class="paginate_button"><a href="#">6</a></li>
+                                    <li class="paginate_button next"><a href="#">Next</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
